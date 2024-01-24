@@ -2,6 +2,9 @@
 from bot import InstaFollower
 import time
 
+# TODO: Insert which Instagram account you want to follow, e.g.:
+ig_account = 'ai_artimagecreator'
+
 # TODO: Instantiate the bot
 bot = InstaFollower()
 
@@ -10,11 +13,9 @@ bot.login()
 
 # TODO: Navigate to the Instagram page > open Followers popup
 time.sleep(5)
-bot.find_followers(username='ai_artimagecreator')
+bot.find_followers(username=ig_account)
 
 while True:
     bot.scroll_down()
     time.sleep(2)
     bot.follow()
-    # bot.scroll_down()
-
